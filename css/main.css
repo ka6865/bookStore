@@ -5,6 +5,12 @@
   position: relative;
 }
 
+.ridi-logo {
+  width: 49px;
+  height: 18px;
+  display: block;
+}
+
 /* 추천/장르 메뉴 */
 #book_category {
   height: 50px;
@@ -69,10 +75,10 @@
    지금 많이 읽고 있는 작품 (Now Ranking)
 ----------------------------------- */
 .nowrankingSwiper {
-  height: 380px !important;
+  height: 380px;
+  width: 100%;
   margin-top: 16px;
   margin-bottom: 16px;
-  width: calc(100% - 80px);
   margin-left: auto;
   margin-right: auto;
 }
@@ -149,8 +155,9 @@
 /* -------------------------------
    오늘, 리디의 발견 (Discovery)
 ----------------------------------- */
+
 .discoverSwiper {
-  width: calc(100% - 80px);
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   height: auto;
@@ -160,7 +167,7 @@
 .discover-item {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1px;
   cursor: pointer;
 }
 
@@ -193,4 +200,76 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* -------------------------------
+   이벤트
+----------------------------------- */
+
+/*. ul  */
+.event-list {
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+/*li */
+.event-item {
+  flex: 1; /* 3개가 너비 배분 */
+  height: 76px;
+  border-radius: 4px; /* 모서리 둥글게 */
+  overflow: hidden;
+  position: relative;
+}
+
+/* <a> 태그 */
+.event-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* 이벤트 카드 내부 */
+.event-card {
+  background-color: rgb(62, 12, 130);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/*이미지  */
+.event-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* 글자보다 뒤에 위치하게 함 */
+}
+
+/* 글자 영역 (이미지 위에 얹음)  */
+.text-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* ★ 이미지(z-index:1)보다 위에 오게 함 */
+
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+/* --- 실제 글자 스타일 --- */
+.event-title {
+  margin: 0;
+  color: #fff; /* 흰색 글씨 */
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.4; /* 줄 간격 */
 }
