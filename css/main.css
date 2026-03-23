@@ -4,7 +4,7 @@
 .common-slider-section .container {
   position: relative;
 }
-
+/* 로고 */
 .ridi-logo {
   width: 49px;
   height: 18px;
@@ -23,7 +23,7 @@
 
 #main_banner {
   width: 100%;
-  height: 335px;
+  height: 347px;
 }
 
 #main_banner .container {
@@ -32,17 +32,16 @@
 
 /*  공통 swiper 속성 */
 .swiper {
-  width: 100%;
+  width: calc(100% - 50px);
+  margin: 0 auto;
   height: 100%;
 }
 
-/* 고유 슬라이더(.mySwiper). */
+/* 메인배너 슬라이더(.mySwiper). */
 .mySwiper {
   height: 100%;
   position: relative;
-  width: calc(100% - 80px);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .swiper-slide {
@@ -61,29 +60,110 @@
 
 #icon_nav {
   height: 142px;
-  padding-left: 226px;
-  padding-right: 226px;
 }
+
 #icon_nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100%;
+  gap: 40px;
 }
 
-/* ----------------------------------
-   지금 많이 읽고 있는 작품 (Now Ranking)
------------------------------------ */
-.nowrankingSwiper {
-  height: 380px;
+.icon {
+  width: 58px;
+  height: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.icon img {
   width: 100%;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 100%;
+}
+/* 아이콘 텍스트 */
+.icon-text {
+  font-weight: bold;
+  font-size: 11px;
+}
+/* ---------------------------------------
+   메인베너
+---------------------------------------- */
+.main-banner-card {
+  display: block;
+  width: 304px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
 }
 
-.nowrankingSwiper .book-item {
+/* --- 이미지 영역 (배경으로 깔기) --- */
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 304px;
+  height: 100%;
+  z-index: 1;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* --- 하단 텍스트 영역 --- */
+.banner-text {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+/* 텍스트 디테일 */
+.banner-text .subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.banner-text .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.banner-text .desc {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* ---------------------------------------------------
+   지금 많이 읽고 있는 작품 (Now Ranking) // 베스트
+----------------------------------------------------- */
+#discover-banner {
+  margin-top: 50px;
+}
+#best-section {
+  margin-top: 60px;
+}
+.nowrankingSwiper,
+.bestSwiper {
+  height: 380px;
+  margin: 16px auto;
+}
+
+.nowrankingSwiper .book-item,
+.bestSwiper .book-item {
   height: calc((100% - 60px) / 3);
   display: flex;
   align-items: stretch;
@@ -119,7 +199,7 @@
 .ranking-card .book-info {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 9px;
   flex: 1;
   min-width: 0;
 }
@@ -155,13 +235,13 @@
 /* -------------------------------
    오늘, 리디의 발견 (Discovery)
 ----------------------------------- */
+.event-section {
+  margin-top: 60px;
+}
 
 .discoverSwiper {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 16px auto 0;
   height: auto;
-  margin-top: 16px;
 }
 
 .discover-item {
@@ -188,25 +268,26 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 100%;
 }
 
 .discover-info .promo-text {
   margin: 0;
   font-size: 13px;
+  font-weight: bold;
   color: #333;
-  line-height: 1.4;
-
-  /* 말줄임표 처리 */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.2;
+  text-align: left;
 }
 
 /* -------------------------------
    이벤트
 ----------------------------------- */
 
-/*. ul  */
+#event-banner {
+  margin-top: 15px;
+}
+/* ul  */
 .event-list {
   display: flex;
   gap: 15px;
@@ -233,43 +314,150 @@
 
 /* 이벤트 카드 내부 */
 .event-card {
-  background-color: rgb(62, 12, 130);
   width: 100%;
   height: 100%;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+#event-card1 {
+  background-color: rgb(62, 12, 130);
+}
+#event-card2 {
+  background-color: rgb(31, 31, 31);
+}
+#event-card3 {
+  background-color: rgb(65, 84, 138);
+}
 /*이미지  */
-.event-img {
-  width: 100%;
+.img-area {
+  width: 40%;
   height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1; /* 글자보다 뒤에 위치하게 함 */
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
 }
 
-/* 글자 영역 (이미지 위에 얹음)  */
-.text-area {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2; /* ★ 이미지(z-index:1)보다 위에 오게 함 */
+.event-img {
+  object-fit: contain;
+}
 
+/* 글자 영역*/
+.text-area {
+  z-index: 2;
   display: flex;
   align-items: center;
-  padding: 0 25px;
+  padding: 0 15px;
   box-sizing: border-box;
 }
 
 /* --- 실제 글자 스타일 --- */
 .event-title {
   margin: 0;
-  color: #fff; /* 흰색 글씨 */
+  color: #fff;
   font-size: 12px;
   font-weight: bold;
-  line-height: 1.4; /* 줄 간격 */
+  line-height: 1.4;
+}
+
+.rating-people {
+  font-size: 11px;
+  color: #999;
+  margin-left: 3px;
+}
+
+/* -----------------------
+우주라이크 소설
+--------------------------*/
+#novel-section {
+  margin-top: 60px;
+  padding-bottom: 120px;
+  border-bottom: 2px solid #eee;
+}
+
+/* 슬라이더 영역 너비 */
+.novelSwiper {
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* 이미지 설정 */
+.novelSwiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* 껍데기 슬라이드 가운데 정렬 담당 */
+.novelSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+/*  <a> 링크태그 */
+.novel-card-wrapper {
+  display: block;
+  width: 100%;
+  height: 364px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+}
+
+/* 1. 바닥 이미지 */
+.novel-card-wrapper .base-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  z-index: 1;
+}
+/* 소설 그라데이션 주기 */
+.novel-card-wrapper .gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 2;
+}
+#gradation1 {
+  background: linear-gradient(to top, rgba(179, 138, 84, 1), transparent),
+    linear-gradient(to top, rgba(179, 138, 84, 1), transparent);
+}
+#gradation2 {
+  background: linear-gradient(to top, rgba(38, 12, 203, 1), transparent),
+    linear-gradient(to top, rgba(38, 12, 203, 1), transparent);
+}
+#gradation3 {
+  background: linear-gradient(to top, rgba(62, 46, 114, 1), transparent),
+    linear-gradient(to top, rgba(62, 46, 114, 1), transparent);
+}
+#gradation4 {
+  background: linear-gradient(to top, rgba(99, 15, 55, 1), transparent),
+    linear-gradient(to top, rgba(99, 15, 55, 1), transparent);
+}
+#gradation5 {
+  background: linear-gradient(to top, rgba(27, 52, 66, 1), transparent),
+    linear-gradient(to top, rgba(27, 52, 66, 1), transparent);
+}
+
+/* 3. 위에 올라가는 이미지 */
+.novel-card-wrapper .top-img {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: 3;
+  display: block;
 }

@@ -1,0 +1,122 @@
+/* ==========================================
+   1. 푸터 전체 레이아웃 
+========================================== */
+
+/* 상단 전체 박스  */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0; /* 위아래 여백 */
+}
+
+/* 왼쪽 메뉴 4기둥 묶음 기둥들 가로 */
+.footer-nav-wrapper {
+  display: flex;
+  gap: 80px;
+}
+
+/* 오른쪽 SNS 아이콘 박스 */
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+/* ==========================================
+     2. 푸터 내부 디테일 (세로 정렬 및 글씨 꾸미기)
+  ========================================== */
+
+/* 기둥 안의 리스트(ul) 세로로 세우기 */
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 기둥 제목 ('서비스', '기타 문의' 등) */
+.footer-nav .nav-title {
+  font-size: 14px;
+  color: #333;
+  margin: 0 0 16px 0;
+  font-weight: bold;
+}
+
+/* 기둥 안의 링크 글자들 */
+.footer-nav ul li a {
+  color: #808991;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* 마우스 호버 효과 */
+.footer-nav ul li a:hover {
+  color: #333;
+}
+
+/* 푸터 하단 전체 여백 */
+.footer-bottom {
+  padding-top: 90px;
+}
+
+/* 토글 버튼 스타일 */
+.biz-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #808991;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+/* 화살표 애니메이션 준비 */
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+/* 버튼에 open 클래스 화살표를 180도 뒤집기 */
+.biz-toggle-btn.open .arrow-icon {
+  transform: rotate(180deg);
+}
+
+/* 상세 정보 상자 (기본: 숨김) */
+.biz-details {
+  display: none;
+  margin-bottom: 12px;
+}
+
+/* 상자 open 클래스로 변경시 보이기 */
+.biz-details.open {
+  display: block;
+}
+
+/* 상세 정보 및 하단 링크 텍스트 스타일 */
+.biz-details p,
+.footer-legal,
+.copyright {
+  font-size: 12px;
+  color: #808991;
+  line-height: 1.6;
+  margin: 0 0 4px 0;
+}
+
+.footer-legal a {
+  color: #808991;
+  text-decoration: none;
+}
+.footer-legal a.bold {
+  font-weight: bold;
+  color: #333;
+}
+
+/* 세로 작대기(|) 스타일 */
+.divider {
+  color: #d1d5d9;
+  margin: 0 4px;
+  font-size: 10px;
+}

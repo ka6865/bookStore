@@ -55,14 +55,12 @@ body {
   margin-top: 0;
   transform: translateY(-50%);
 }
-
 .swiper-button-next {
-  right: 0;
+  right: -25px; /* 원하시는 만큼 조절하세요! (숫자가 커질수록 밖으로 나감) */
 }
 .swiper-button-prev {
-  left: 0;
+  left: -25px; /* 원하시는 만큼 조절하세요! */
 }
-
 .swiper-button-disabled {
   display: none !important;
 }
