@@ -1,0 +1,113 @@
+<style>
+  /* 작가 프로필 전체 컨테이너 */
+  .author-container {
+    color: #333;
+  }
+
+  /* 상단 이름 & 버튼 영역 */
+  .author-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .author-name {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  .author-en-name {
+    font-size: 16px;
+    color: #999;
+    font-weight: 400;
+  }
+
+  /* 리디북스 특유의 파란색 알림 버튼 */
+  .follow-btn {
+    display: flex;
+    align-items: center;
+    padding: 6px 15px;
+    border: 1px solid #1f8ce6;
+    border-radius: 20px;
+    background: #fff;
+    color: #1f8ce6;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  /* 상세 정보 리스트 영역 */
+  .author-detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .detail-item {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .detail-label {
+    width: 60px; /* 라벨 너비 고정 */
+    color: #808991;
+    flex-shrink: 0;
+  }
+
+  .detail-value {
+    color: #303538;
+  }
+
+  /* 링크 스타일 */
+  .author-links a {
+    color: #1f8ce6;
+    text-decoration: none;
+  }
+
+  .link-divider {
+    color: #d1d5d9;
+    margin: 0 5px;
+  }
+</style>
+
+<div class="author-container">
+  <div class="author-header">
+    <h3 class="author-name">앤디 위어</h3>
+    <span class="author-en-name">Andy Weir</span>
+    <button class="follow-btn">+ 작가 신간 알림 · 소식</button>
+  </div>
+
+  <div class="author-detail-list">
+    <div class="detail-item">
+      <span class="detail-label">국적</span>
+      <span class="detail-value">미국</span>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">출생</span>
+      <span class="detail-value">1972년 6월 16일</span>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">학력</span>
+      <span class="detail-value">캘리포니아 대학교 샌디에이고캠퍼스 컴퓨터공학 학사</span>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">경력</span>
+      <span class="detail-value">산디아 국립연구소 컴퓨터 프로그래머</span>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">데뷔</span>
+      <span class="detail-value">소설 '마션'</span>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">링크</span>
+      <span class="detail-value author-links">
+        <a href="#">공식 사이트</a>
+        <span class="link-divider">·</span>
+        <a href="#">트위터</a>
+      </span>
+    </div>
+  </div>
+</div>

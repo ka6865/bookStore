@@ -20,6 +20,17 @@
   display: flex;
   gap: 12px;
 }
+/* 동그란 SNS 버튼 스타일 */
+.social-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #d1d5d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #808991;
+}
 
 /* ==========================================
      2. 푸터 내부 디테일 (세로 정렬 및 글씨 꾸미기)
@@ -52,6 +63,11 @@
 /* 마우스 호버 효과 */
 .footer-nav ul li a:hover {
   color: #333;
+}
+
+/* N 뱃지 색상 입히기 */
+.badge-n {
+  color: #1f8ce6;
 }
 
 /* 푸터 하단 전체 여백 */

@@ -39,7 +39,23 @@
             </a>
           </h1>
           <div id="right_group">
-            <div id="search_box"><input type="text" /></div>
+            <div id="search_box">
+              <svg
+                width="14px"
+                height="14px"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fig-1hsho1o"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M13.28 8.18a5.1 5.1 0 11-10.2 0 5.1 5.1 0 0110.2 0zm-1.031 5.069a6.5 6.5 0 11.991-.989l4.695 4.695a.7.7 0 11-.99.99l-4.696-4.696z"
+                ></path>
+              </svg>
+
+              <input type="text" />
+            </div>
             <div id="login">
               <a href="#">로그인/회원가입</a>
             </div>
@@ -56,13 +72,32 @@
                   <li><a href="#">웹툰</a></li>
                   <li><a href="#">만화</a></li>
                   <li><a href="#">웹소설</a></li>
-                  <li><a href="#">도서</a></li>
+                  <li><a href="#" class="active">도서</a></li>
                   <li><a href="#">셀렉트</a></li>
                 </ul>
               </nav>
             </div>
             <div id="category_right">
-              <div id="full_category"><a href="#">전체카테고리</a></div>
+              <div id="full_category">
+                <a href="#">
+                  <svg
+                    width="26px"
+                    height="26px"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="fig-zt3wi2"
+                  >
+                    <path
+                      d="M4.5 7h15M4.5 12h15M4.5 17h15"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path></svg
+                  >전체카테고리</a
+                >
+              </div>
               <div id="cash"><a href="#">캐쉬충전</a></div>
             </div>
           </div>
@@ -76,7 +111,7 @@
           <div id="book_category">
             <nav>
               <ul>
-                <li class="active"><a href="#">추천</a></li>
+                <li><a href="#" class="active">추천</a></li>
                 <li><a href="#">기획전</a></li>
                 <li><a href="#">소설</a></li>
                 <li><a href="#">인문/사회/역사</a></li>
@@ -111,15 +146,15 @@
                     <img src="./img/banner2.webp" alt="배너 이미지" />
                   </div>
                   <div class="banner-text">
-                    <p class="subtitle"></p>
-                    <h3 class="title"></h3>
-                    <p class="desc"></p>
+                    <p class="subtitle">2026년</p>
+                    <h3 class="title">리디북스</h3>
+                    <p class="desc">클론페이지</p>
                   </div>
                 </a>
               </div>
 
               <div class="swiper-slide">
-                <a href="#" class="main-banner-card" id="main-banner3">
+                <a href="sub.html" class="main-banner-card" id="main-banner3">
                   <div class="banner-img">
                     <img src="./img/banner3.webp" alt="배너 이미지" />
                   </div>
@@ -297,75 +332,78 @@
       이벤트
       ----------------------------->
       <section class="event-section">
-        <div class="container">
+        <div class="container" id="event-container">
           <h2>이벤트</h2>
-          <div class="container" id="event-banner">
-            <ul class="event-list">
-              <li class="event-item">
-                <a href="#">
-                  <div class="event-card" id="event-card1">
-                    <div class="text-area">
-                      <p class="event-title">
-                        지루한 일상 탈출엔?<br />리디셀렉트와 함께 이세계로!
-                      </p>
-                    </div>
-                    <div class="img-area">
-                      <img
-                        src="./img/event1.webp"
-                        alt="이벤트 이미지"
-                        class="event-img"
-                      />
-                    </div>
+          <a href="#" class="more">더보기</a>
+        </div>
+        <div class="container" id="event-banner">
+          <ul class="event-list">
+            <li class="event-item">
+              <a href="#">
+                <div class="event-card" id="event-card1">
+                  <div class="text-area">
+                    <p class="event-title">
+                      지루한 일상 탈출엔?<br />리디셀렉트와 함께 이세계로!
+                    </p>
                   </div>
-                </a>
-              </li>
-              <li class="event-item">
-                <a href="#">
-                  <div class="event-card" id="event-card2">
-                    <div class="text-area">
-                      <p class="event-title">
-                        3인 3색의 이야기<br />우주라이크소설 3월 신작
-                      </p>
-                    </div>
-                    <div class="img-area">
-                      <img
-                        src="./img/event2.webp"
-                        alt="이벤트 이미지"
-                        class="event-img"
-                      />
-                    </div>
+                  <div class="img-area">
+                    <img
+                      src="./img/event1.webp"
+                      alt="이벤트 이미지"
+                      class="event-img"
+                    />
                   </div>
-                </a>
-              </li>
-              <li class="event-item">
-                <a href="#">
-                  <div class="event-card" id="event-card3">
-                    <div class="text-area">
-                      <p class="event-title">
-                        히가시노 게이고<br />첫 애니메이션 영화화!
-                      </p>
-                    </div>
-                    <div class="img-area">
-                      <img
-                        src="./img/event3.webp"
-                        alt="이벤트 이미지"
-                        class="event-img"
-                      />
-                    </div>
+                </div>
+              </a>
+            </li>
+            <li class="event-item">
+              <a href="#">
+                <div class="event-card" id="event-card2">
+                  <div class="text-area">
+                    <p class="event-title">
+                      3인 3색의 이야기<br />우주라이크소설 3월 신작
+                    </p>
                   </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+                  <div class="img-area">
+                    <img
+                      src="./img/event2.webp"
+                      alt="이벤트 이미지"
+                      class="event-img"
+                    />
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="event-item">
+              <a href="#">
+                <div class="event-card" id="event-card3">
+                  <div class="text-area">
+                    <p class="event-title">
+                      히가시노 게이고<br />첫 애니메이션 영화화!
+                    </p>
+                  </div>
+                  <div class="img-area">
+                    <img
+                      src="./img/event3.webp"
+                      alt="이벤트 이미지"
+                      class="event-img"
+                    />
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
       <!--------------------------
       베스트
       ----------------------------->
       <section class="common-slider-section" id="best-section">
-        <div class="container">
+        <div class="container" id="best-container">
           <h2>베스트</h2>
-
+          <a href="#" class="more">더보기</a>
+        </div>
+        <div class="container">
           <div class="swiper bestSwiper">
             <div class="swiper-wrapper" id="best-list"></div>
           </div>
@@ -446,6 +484,9 @@
               </div>
             </div>
           </div>
+          <div class="swiper-button-prev novel-prev">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
         </div>
       </section>
     </main>
@@ -520,17 +561,101 @@
               <ul>
                 <li><a href="#">회사 소개</a></li>
                 <li>
-                  <a href="#">인재 채용 <span class="badge-n">N</span></a>
+                  <a href="#" class="hiring-link">
+                    인재 채용
+
+                    <svg
+                      class="badge-n"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="7" cy="7" r="7" fill="currentColor"></circle>
+                      <path
+                        d="M9.18 9.798h-.992L5.932 6.302v3.496H4.82V4.102h.992L8.068 7.59V4.102H9.18v5.696z"
+                        fill="#fff"
+                      ></path>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </nav>
           </div>
           <div class="footer-social">
-            <div class="social-circle">F</div>
-            <div class="social-circle">I</div>
-            <div class="social-circle">X</div>
-            <div class="social-circle">Y</div>
-            <div class="social-circle">T</div>
+            <a href="#" class="social-circle" aria-label="Facebook">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.61 13.253l.31-2.33H12.97V9.41c0-.64.282-1.264 1.15-1.264H15v-1.98A8.796 8.796 0 0013.439 6c-1.605 0-2.646 1.123-2.646 3.144v1.78H9v2.329h1.793V18.9c.723.133 1.46.133 2.183 0v-5.647h1.634z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="social-circle" aria-label="Instagram">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.687 6.3H9.314A3.013 3.013 0 006.3 9.313v5.373A3.013 3.013 0 009.314 17.7h5.373a3.013 3.013 0 003.013-3.012V9.313A3.012 3.012 0 0014.687 6.3zm0-1.3H9.314A4.314 4.314 0 005 9.313v5.373A4.313 4.313 0 009.314 19h5.373A4.312 4.312 0 0019 14.688V9.313A4.31 4.31 0 0014.687 5zm1.871 3.28a.937.937 0 11-1.874-.002.937.937 0 011.874.001zM14.2 12a2.2 2.2 0 11-4.4 0 2.2 2.2 0 014.4 0zm1.3 0a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="social-circle" aria-label="X">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.776 5.5l4.83 6.43-4.856 5.237h1.092l4.254-4.583 3.433 4.583h3.721l-5.101-6.796L17.674 5.5h-1.092l-3.923 4.217L9.497 5.5h-3.72zm1.607.802h1.713l7.547 10.063H14.93L7.383 6.302z"
+                  fill="#787878"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="social-circle" aria-label="Youtube">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.521 16.57A1 1 0 019 15.717V8.283a1 1 0 011.521-.853l6.083 3.717a1 1 0 010 1.706L10.52 16.57z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="social-circle" aria-label="Tiktok">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.371 5h2.411s1.113 2.656 3.718 2.911l-.46 2.35s-1.838-.052-3.268-1.533v5.822s0 1.226-.664 2.247c0 0-1.073 1.941-3.473 2.145 0 0-1.736.205-3.268-.919 0 0-1.635-1.021-1.839-3.268 0 0-.357-2.094 1.481-3.83 0 0 1.226-1.43 3.984-1.226v2.4h-.767s-1.532-.102-2.144 1.43c0 0-.562 1.48.663 2.502 0 0 .92.817 2.146.409 0 0 1.174-.307 1.43-1.634 0 0 .05-.154.05-.766V5z"
+                  fill="#787878"
+                ></path>
+              </svg>
+            </a>
           </div>
         </div>
         <div class="footer-bottom">

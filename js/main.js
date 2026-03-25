@@ -40,9 +40,11 @@ const swiper = new Swiper(".mySwiper", {
 
   loopAddBlankSlides: false, // Swiper 최신 버전(10 이상)용
   speed: 400, // 핸드폰 스크롤 같은느낌
-  tocuhRatio: 0.6,
-  freeMode: true,
-
+  touchRatio: 0.6,
+  freeMode: {
+    enabled: true,
+    sticky: true,
+  },
   autoplay: {
     // 자동 넘김
     delay: 30000,
@@ -245,6 +247,10 @@ function renderGridSection(books, listId, swiperClass, nextBtn, prevBtn) {
       rows: 3,
       fill: "column",
     },
+    loopAddBlankSlides: false, // Swiper 최신 버전(10 이상)용
+    speed: 400, // 핸드폰 스크롤 같은느낌
+    touchRatio: 0.6,
+    freeMode: true,
     spaceBetween: 5,
     navigation: {
       nextEl: nextBtn,
@@ -292,8 +298,16 @@ const novelSwiper = new Swiper(".novelSwiper", {
   slidesPerView: 5,
   slidesPerGroup: 1,
   spaceBetween: 5,
+  slidesOffsetAfter: 5,
+
+  speed: 400, // 핸드폰 스크롤 같은느낌
+  touchRatio: 0.6,
+  freeMode: true,
   mousewheel: {
     forceToAxis: true,
+  },
+  navigation: {
+    prevEl: ".novel-prev", // 왼쪽(이전) 버튼
   },
 });
 

@@ -111,3 +111,29 @@ const BestTitles = [
 async function getBestBooks() {
   return await getBooksByTitles(BestTitles);
 }
+
+//  서브 페이지 책정보 불러오기
+
+// 상세 페이지용: 책 한 권 정보만 가져오기
+async function getBookDetail(title) {
+  try {
+    const params = new URLSearchParams({
+      target: "title",
+      query: title,
+      size: 1,
+    });
+
+    const response = await fetch(
+      `https://dapi.kakao.com/v3/search/book?${params}`,
+      {
+        headers: { Authorization: `KakaoAK ${REST_API_KEY}` },
+      }
+    );
+
+    const data = await response.json();
+    return data.documents[0] || null;
+  } catch (error) {
+    console.error("상세 정보 로드 에러:", error);
+    return null;
+  }
+}

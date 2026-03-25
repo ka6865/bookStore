@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로젝트 헤일메리 - 리디</title>
+
+    <!-- 아이콘 및 공통 CSS 연결 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/sub.css" />
+  </head>
+  <body>
+    <!-- 헤더 영역 (index.html과 동일) -->
+    <header>
+      <div id="header_top">
+        <div class="container">
+          <h1 class="logo">
+            <a href="./index.html" aria-label="리디 홈으로 이동">
+              <svg
+                class="ridi-logo"
+                viewBox="0 0 66 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.29 8.281v.063c0 3.306-1.612 5.8-4.546 7.08l5.608 8.155h-6.8l-4.778-7.098H5.787v7.103H0V.52h11.444c5.457 0 8.845 2.974 8.845 7.76zm-9.167 3.454c2.076 0 3.317-1.45 3.317-3.138v-.062c0-2.258-1.853-3.17-3.411-3.17H5.787v6.37h5.336zM24.37.52h5.786v23.063h-5.786V.52zm20.668 0H34.39v23.063h10.65c7.117 0 10.73-4.85 10.73-11.53v-.061C55.77 5.343 52.156.52 45.04.52zm4.724 11.592c0 3.697-1.63 6.448-5.384 6.448h-4.202V5.54h4.202c3.755 0 5.385 2.774 5.385 6.511v.063zM58.94.52h5.786v23.063H58.94V.52z"
+                  fill="#1E9EFF"
+                ></path>
+              </svg>
+            </a>
+          </h1>
+          <div id="right_group">
+            <div id="search_box">
+              <svg
+                width="14px"
+                height="14px"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="fig-1hsho1o"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M13.28 8.18a5.1 5.1 0 11-10.2 0 5.1 5.1 0 0110.2 0zm-1.031 5.069a6.5 6.5 0 11.991-.989l4.695 4.695a.7.7 0 11-.99.99l-4.696-4.696z"
+                ></path>
+              </svg>
+              <input type="text" />
+            </div>
+            <div id="login">
+              <a href="#">로그인/회원가입</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="header_main">
+        <div class="container">
+          <div id="category">
+            <div id="category_left">
+              <nav>
+                <ul>
+                  <li><a href="#">웹툰</a></li>
+                  <li><a href="#">만화</a></li>
+                  <li><a href="#">웹소설</a></li>
+                  <li><a href="#" class="active">도서</a></li>
+                  <li><a href="#">셀렉트</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div id="category_right">
+              <div id="full_category">
+                <a href="#">전체카테고리</a>
+              </div>
+              <div id="cash"><a href="#">캐쉬충전</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main>
+      <section id="book-detail-section">
+        <div class="container" id="book-detail-container">
+          <div id="main-detail">
+            <div id="detail-img">
+              <img id="book-thumbnail" src="" alt="책 표지" />
+            </div>
+
+            <div id="detail-info">
+              <h1 id="detail-title">제목</h1>
+
+              <div class="author-row">
+                <span id="detail-author"></span> 저자
+                <span class="divider">|</span>
+                <span id="detail-translator"></span> 번역
+              </div>
+
+              <div id="detail-publisher" class="publisher-info"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="book-detail-text">
+        <div class="container">
+          <h3>프로젝트 헤일메리</h3>
+          <h2>작품 정보</h2>
+        </div>
+        <!-- 작품 정보 아래내용 -->
+        <div class="container" id="book-detail-text-container">
+          <div class="tab-header">
+            <button class="tab-btn active" data-target="intro">
+              작품 소개
+            </button>
+            <button class="tab-btn" data-target="index" id="middle-btn">
+              목차
+            </button>
+            <button class="tab-btn" data-target="review">출판사 서평</button>
+          </div>
+
+          <div class="tab-body">
+            <div id="intro" class="tab-content active">작품 소개</div>
+            <div id="index" class="tab-content">목차</div>
+            <div id="review" class="tab-content">출판사 서평</div>
+            <div class="more-btn-wrapper">
+              <button class="more-btn" id="btn-more">
+                더보기
+                <svg width="12" height="12" viewBox="0 0 24 24">
+                  <path d="M7 10l5 5 5-5z" fill="currentColor" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 작가 소개부분 -->
+
+      <section id="writer">
+        <div class="container">
+          <h3>작가</h3>
+        </div>
+
+        <div class="container" id="book-detail-text-container">
+          <div class="tab-header">
+            <button
+              class="tab-btn2 active"
+              data-target="writer-profile"
+              id="writer-btn"
+            >
+              작가 프로필
+            </button>
+            <button class="tab-btn2" data-target="introduce">작가 소개</button>
+          </div>
+
+          <div class="tab-body">
+            <div id="writer-profile" class="tab-content active">
+              <button
+                id="author"
+                data-target="author-name"
+                class="tab-btn3 active"
+              ></button>
+
+              <button
+                id="translation"
+                data-target="translation-name"
+                class="tab-btn3"
+              ></button>
+
+              <div class="tab-body">
+                <div id="author-name" class="tab-content active">1</div>
+                <div id="translation-name" class="tab-content">2</div>
+              </div>
+            </div>
+            <div id="introduce" class="tab-content">작가 소개 영역</div>
+
+            <div class="more-btn-wrapper">
+              <button class="more-btn" id="btn-more2">
+                더보기
+                <svg width="12" height="12" viewBox="0 0 24 24">
+                  <path d="M7 10l5 5 5-5z" fill="currentColor" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 푸터 영역 (index.html과 동일) -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-nav-wrapper">
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">공지사항</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav">
+              <h3 class="nav-title">서비스</h3>
+              <ul>
+                <li><a href="#">제휴카드</a></li>
+                <li><a href="#">뷰어 다운로드</a></li>
+                <li><a href="#">CP사이트</a></li>
+                <li><a href="#">리디바탕</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav">
+              <h3 class="nav-title">기타 문의</h3>
+              <ul>
+                <li><a href="#">원고 투고</a></li>
+                <li><a href="#">사업 제휴 문의</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-nav">
+              <h3 class="nav-title">회사</h3>
+              <ul>
+                <li><a href="#">회사 소개</a></li>
+                <li><a href="#" class="hiring-link">인재 채용</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <button type="button" class="biz-toggle-btn" id="biz-btn">
+            리디(주) 사업자 정보
+            <svg
+              class="arrow-icon"
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 4.5L6 8L9.5 4.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <div class="biz-details" id="biz-content">
+            <p>
+              대표자 배기식 <span class="divider">|</span> 사업자 등록번호
+              120-87-27435 <span class="divider">|</span> 통신판매업 신고번호 제
+              2009-서울강남 35-02139호
+            </p>
+            <p>
+              이메일 help@ridi.com <span class="divider">|</span> 대표전화
+              1644-0331 <span class="divider">|</span> 주소 서울시 강남구 역삼동
+              702-28 어반벤치빌딩 4,10,11층(테헤란로 325)
+            </p>
+          </div>
+
+          <div class="footer-legal">
+            <a href="#">이용약관</a> <span class="divider">|</span>
+            <a href="#" class="bold">개인정보 처리방침</a>
+            <span class="divider">|</span> <a href="#">청소년보호정책</a>
+            <span class="divider">|</span>
+            <a href="#">사업자정보확인</a>
+          </div>
+          <p class="copyright">© RIDI Corp.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/sub.js"></script>
+  </body>
+</html>

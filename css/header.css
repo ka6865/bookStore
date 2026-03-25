@@ -16,8 +16,32 @@
   align-items: center;
   gap: 20px;
 }
+/* 겉을 감싸는 회색 검색창 */
+#search_box {
+  display: flex;
+  align-items: center;
+  background-color: #f2f4f5;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 220px;
+}
 
-/* 3. 헤더 하단 메뉴 (웹툰 ~ 캐시충전) */
+/* 돋보기 아이콘 */
+#search_box svg {
+  color: #808991;
+  margin-right: 8px;
+}
+
+/* 진짜 입력창 투명 */
+#search_box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
+}
+/*  헤더 하단 메뉴 (웹툰 ~ 캐시충전) */
 #header_main {
   width: 100%;
   height: 50px;
@@ -37,4 +61,16 @@
   display: flex;
   gap: 20px;
   align-items: center;
+}
+#full_category a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#full_category svg {
+  color: #808991;
+}
+
+ul li a.active {
+  color: #6a58efd7;
 }

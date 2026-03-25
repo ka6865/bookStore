@@ -4,6 +4,20 @@
 .common-slider-section .container {
   position: relative;
 }
+
+/* 더보기 공통 */
+#event-container,
+#best-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.more {
+  font-size: 12px;
+  color: #3d3d3d;
+}
+
 /* 로고 */
 .ridi-logo {
   width: 49px;
@@ -18,7 +32,17 @@
   align-items: center;
 }
 #book_category ul {
+  display: flex;
+  align-items: center;
   gap: 15px;
+}
+
+#book_category nav ul li a.active {
+  color: #6a58efd7;
+  border: 2px solid #6a58efd7;
+  border-radius: 20px;
+  padding: 4px 10px;
+  display: inline-block;
 }
 
 #main_banner {
@@ -60,6 +84,7 @@
 
 #icon_nav {
   height: 142px;
+  margin-bottom: 40px;
 }
 
 #icon_nav ul {
@@ -379,8 +404,10 @@
 
 /* 슬라이더 영역 너비 */
 .novelSwiper {
-  width: 100%;
   margin-top: 16px;
+}
+.novel-prev {
+  top: 55% !important;
 }
 
 /* 이미지 설정 */

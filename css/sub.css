@@ -1,0 +1,143 @@
+#main-detail {
+  display: flex;
+  gap: 40px;
+  padding: 40px 0;
+  align-items: flex-start;
+}
+
+#detail-img img {
+  width: 200px;
+  border-radius: 4px;
+}
+
+#detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#detail-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.author-row {
+  font-size: 15px;
+  color: #666;
+}
+
+.divider {
+  margin: 0 10px;
+  color: #ddd;
+}
+
+.publisher-info {
+  font-size: 15px;
+  color: #666;
+}
+/* --------------------------
+작품 정보  및 작가 소개 부분
+ --------------------------- */
+.tab-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-btn,
+.tab-btn2 {
+  width: 100%;
+  background-color: #f3f4f5;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border: none;
+  border-top: 2px solid;
+  border-bottom: 1px solid;
+}
+
+#middle-btn {
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+#writer-btn {
+  border-right: 1px solid;
+}
+.tab-content {
+  display: none;
+  white-space: pre-line;
+  color: #999;
+  max-height: 200px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+/* active 클래스가 붙은 것만 보임 */
+.tab-content.active {
+  display: block;
+}
+
+/* 클릭된 버튼 스타일 */
+.tab-btn.active,
+.tab-btn2.active {
+  font-weight: bold;
+  background-color: white;
+  border-bottom: none;
+}
+
+/* 더보기 버튼 */
+.more-btn-wrapper {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.more-btn {
+  width: 100%;
+  padding: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* 더보기 클릭 시 내용 확장 */
+.tab-content.expanded {
+  max-height: 2000px;
+}
+
+/* 작가 프로필 */
+#writer-profile.active {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: none; /* 부모 상자의 200px 높이 제한 해제 */
+  overflow: visible; /* 부모 상자 밖으로 삐져나가는 부분 잘림 방지 */
+  white-space: normal; /* HTML 줄바꿈(엔터)이 여백으로 나타나는 현상 방지 */
+}
+#writer-profile .tab-body {
+  width: 100%;
+}
+.tab-btn3 {
+  width: 140px;
+  height: 40px;
+  border-radius: 80px;
+  font-size: 16px;
+}
+.tab-btn3.active {
+  background-color: rgb(26, 26, 26);
+  color: #fff;
+}
+
+#author-name,
+#translation-name {
+  height: auto;
+  max-height: none; /* 200px 높이 제한 해제 */
+  overflow: visible; /* 잘림 방지 */
+  margin-top: 15px; /* 위쪽 버튼들과의 여백 */
+  white-space: normal !important;
+}
