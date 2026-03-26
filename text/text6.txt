@@ -1,0 +1,22 @@
+<div class="translation-container">
+  <div class="translation-header">
+    <h3 class="translation-name">강동혁</h3>
+    <button class="follow-btn">+ 작가 신간 알림 · 소식</button>
+  </div>
+
+  <div class="author-detail-list">
+    <div class="detail-item">
+      <span class="detail-label">국적</span>
+      <span class="detail-value">대한민국</span>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">학력</span>
+      <span class="detail-value">서울대학교 대학원 영문학 석사</span>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">학력</span>
+      <span class="detail-value">서서울대학교 영문과 학사</span>
+    </div>
+    </div>
+  </div>
+</div>

@@ -151,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadTextToElement("./text/text3.txt", "review");
   loadTextToElement("./text/text4.txt", "introduce");
   loadTextToElement("./text/text5.txt", "author-name");
+  loadTextToElement("./text/text6.txt", "translation-name");
 });
 
 // // 더보기 버튼 작동

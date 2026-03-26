@@ -11,6 +11,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/sub.css" />
@@ -85,111 +86,245 @@
 
     <!-- 메인 컨텐츠 영역 -->
     <main>
-      <section id="book-detail-section">
-        <div class="container" id="book-detail-container">
-          <div id="main-detail">
-            <div id="detail-img">
-              <img id="book-thumbnail" src="" alt="책 표지" />
-            </div>
+      <!-- 🌟 전체를 감싸는 가장 큰 레이아웃 컨테이너 (기존 container 역할 대체) -->
+      <div class="container page-layout-wrap">
+        <!-- 📦 왼쪽: 기존 콘텐츠 전체 영역 -->
+        <div class="left-main-content">
+          <section id="book-detail-section">
+            <div id="book-detail-container">
+              <div id="main-detail">
+                <div id="detail-img">
+                  <img id="book-thumbnail" alt="책 표지" />
+                </div>
 
-            <div id="detail-info">
-              <h1 id="detail-title">제목</h1>
+                <div id="detail-info">
+                  <div class="book-category-wrapper">
+                    <div class="category-path">
+                      <a href="#" class="category-link">소설</a>
+                      <span class="category-arrow">&gt;</span>
+                      <a href="#" class="category-link">SF 소설</a>
+                    </div>
 
-              <div class="author-row">
-                <span id="detail-author"></span> 저자
-                <span class="divider">|</span>
-                <span id="detail-translator"></span> 번역
+                    <span class="category-divider">|</span>
+
+                    <div class="category-path">
+                      <a href="#" class="category-link">소설</a>
+                      <span class="category-arrow">&gt;</span>
+                      <a href="#" class="category-link">영미소설</a>
+                    </div>
+                  </div>
+                  <h1 id="detail-title">제목</h1>
+
+                  <div class="author-row">
+                    <span id="detail-author"></span> 저자
+                    <span class="divider">|</span>
+                    <span id="detail-translator"></span> 번역
+                  </div>
+                  <div id="detail-publisher" class="publisher-info"></div>
+                  <div id="interest">
+                    <button class="follow-btn">+ 관심</button>
+                  </div>
+                </div>
+                <div class="detail-others">
+                  <div class="detail-event">
+                    <div class="event-logo">이벤트</div>
+                    <ul>
+                      <li id="event-first">
+                        <a href="#">
+                          [~50%▼] 앤디 위어 ⟪프로젝트 헤일메리⟫ 영화 개봉 기념
+                          이벤트 (~4/9)
+                          <svg
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            role="presentation"
+                            class="rigrid-111o5ku"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M3.99734 12.5106C3.72398 12.2372 3.72398 11.794 3.99734 11.5206L8.51903 6.99891L3.99734 2.47722C3.72398 2.20385 3.72398 1.76064 3.99734 1.48727C4.27071 1.2139 4.71393 1.2139 4.98729 1.48727L10.004 6.50393C10.2773 6.7773 10.2773 7.22052 10.004 7.49388L4.98729 12.5106C4.71393 12.7839 4.27071 12.7839 3.99734 12.5106Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          >← 지금 보시는 이 책, 리뷰 남기면 전원 포인트🎁
+                          <svg
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            role="presentation"
+                            class="rigrid-111o5ku"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M3.99734 12.5106C3.72398 12.2372 3.72398 11.794 3.99734 11.5206L8.51903 6.99891L3.99734 2.47722C3.72398 2.20385 3.72398 1.76064 3.99734 1.48727C4.27071 1.2139 4.71393 1.2139 4.98729 1.48727L10.004 6.50393C10.2773 6.7773 10.2773 7.22052 10.004 7.49388L4.98729 12.5106C4.71393 12.7839 4.27071 12.7839 3.99734 12.5106Z"
+                              fill="currentColor"
+                            ></path></svg
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-
-              <div id="detail-publisher" class="publisher-info"></div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="book-detail-text">
-        <div class="container">
-          <h3>프로젝트 헤일메리</h3>
-          <h2>작품 정보</h2>
-        </div>
-        <!-- 작품 정보 아래내용 -->
-        <div class="container" id="book-detail-text-container">
-          <div class="tab-header">
-            <button class="tab-btn active" data-target="intro">
-              작품 소개
-            </button>
-            <button class="tab-btn" data-target="index" id="middle-btn">
-              목차
-            </button>
-            <button class="tab-btn" data-target="review">출판사 서평</button>
-          </div>
+          </section>
 
-          <div class="tab-body">
-            <div id="intro" class="tab-content active">작품 소개</div>
-            <div id="index" class="tab-content">목차</div>
-            <div id="review" class="tab-content">출판사 서평</div>
-            <div class="more-btn-wrapper">
-              <button class="more-btn" id="btn-more">
-                더보기
-                <svg width="12" height="12" viewBox="0 0 24 24">
-                  <path d="M7 10l5 5 5-5z" fill="currentColor" />
-                </svg>
-              </button>
+          <section id="book-detail-text">
+            <div>
+              <h3>프로젝트 헤일메리</h3>
+              <h2>작품 정보</h2>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- 작가 소개부분 -->
-
-      <section id="writer">
-        <div class="container">
-          <h3>작가</h3>
-        </div>
-
-        <div class="container" id="book-detail-text-container">
-          <div class="tab-header">
-            <button
-              class="tab-btn2 active"
-              data-target="writer-profile"
-              id="writer-btn"
-            >
-              작가 프로필
-            </button>
-            <button class="tab-btn2" data-target="introduce">작가 소개</button>
-          </div>
-
-          <div class="tab-body">
-            <div id="writer-profile" class="tab-content active">
-              <button
-                id="author"
-                data-target="author-name"
-                class="tab-btn3 active"
-              ></button>
-
-              <button
-                id="translation"
-                data-target="translation-name"
-                class="tab-btn3"
-              ></button>
+            <!-- 작품 정보 아래내용 -->
+            <div id="book-detail-text-container">
+              <div class="tab-header">
+                <button class="tab-btn active" data-target="intro">
+                  작품 소개
+                </button>
+                <button class="tab-btn" data-target="index" id="middle-btn">
+                  목차
+                </button>
+                <button class="tab-btn" data-target="review">
+                  출판사 서평
+                </button>
+              </div>
 
               <div class="tab-body">
-                <div id="author-name" class="tab-content active">1</div>
-                <div id="translation-name" class="tab-content">2</div>
+                <div id="intro" class="tab-content active">작품 소개</div>
+                <div id="index" class="tab-content">목차</div>
+                <div id="review" class="tab-content">출판사 서평</div>
+                <div class="more-btn-wrapper">
+                  <button class="more-btn" id="btn-more">
+                    더보기
+                    <svg width="12" height="12" viewBox="0 0 24 24">
+                      <path d="M7 10l5 5 5-5z" fill="currentColor" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
-            <div id="introduce" class="tab-content">작가 소개 영역</div>
+          </section>
 
-            <div class="more-btn-wrapper">
-              <button class="more-btn" id="btn-more2">
-                더보기
-                <svg width="12" height="12" viewBox="0 0 24 24">
-                  <path d="M7 10l5 5 5-5z" fill="currentColor" />
-                </svg>
-              </button>
+          <!-- 작가 프로필 및 소개부분 -->
+          <section id="writer">
+            <div>
+              <h3>작가</h3>
             </div>
-          </div>
+
+            <div>
+              <div class="tab-header">
+                <button
+                  class="tab-btn2 active"
+                  data-target="writer-profile"
+                  id="writer-btn"
+                >
+                  작가 프로필
+                </button>
+                <button class="tab-btn2" data-target="introduce">
+                  작가 소개
+                </button>
+              </div>
+
+              <div class="tab-body">
+                <div id="writer-profile" class="tab-content active">
+                  <button
+                    id="author"
+                    data-target="author-name"
+                    class="tab-btn3 active"
+                  ></button>
+
+                  <button
+                    id="translation"
+                    data-target="translation-name"
+                    class="tab-btn3"
+                  ></button>
+
+                  <div class="tab-body">
+                    <div id="author-name" class="tab-content active">1</div>
+                    <div id="translation-name" class="tab-content">2</div>
+                  </div>
+                </div>
+                <div id="introduce" class="tab-content">작가 소개 영역</div>
+
+                <div class="more-btn-wrapper">
+                  <button class="more-btn" id="btn-more2">
+                    더보기
+                    <svg width="12" height="12" viewBox="0 0 24 24">
+                      <path d="M7 10l5 5 5-5z" fill="currentColor" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+        <!--  left-main-content  -->
+
+        <!--  오른쪽 사이드바 -->
+        <aside class="detail-sidebar">
+          <h3 class="sidebar-title">
+            SF 소설 베스트
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </h3>
+          <ol class="best-list">
+            <li>
+              <a href="#"><span class="rank">1</span> 프로젝트 헤일메리</a>
+            </li>
+            <li>
+              <a href="#"><span class="rank">2</span> 마션 (스페셜 에디션)</a>
+            </li>
+            <li>
+              <a href="#"
+                ><span class="rank">3</span> 아르테미스 (스페셜 에디션)</a
+              >
+            </li>
+            <li>
+              <a href="#"><span class="rank">4</span> 스패로</a>
+            </li>
+            <li>
+              <a href="#"><span class="rank">5</span> 없는 곳에 존재하는</a>
+            </li>
+            <li>
+              <a href="#"><span class="rank">6</span> 태초의 빛</a>
+            </li>
+            <li>
+              <a href="#"><span class="rank">7</span> 삼체X: 관상지주</a>
+            </li>
+            <li>
+              <a href="#"
+                ><span class="rank">8</span> 개정판 | 삼체 3부작 완결 세트...</a
+              >
+            </li>
+            <li>
+              <a href="#"><span class="rank">9</span> 잠과 영혼</a>
+            </li>
+            <li>
+              <a href="#"
+                ><span class="rank">10</span> 개정판 | 돌이킬 수 없는</a
+              >
+            </li>
+          </ol>
+        </aside>
+      </div>
+      <!-- // page-layout-wrap 끝 -->
     </main>
 
     <!-- 푸터 영역 (index.html과 동일) -->

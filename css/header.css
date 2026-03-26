@@ -11,6 +11,13 @@
   align-items: center;
   height: 100%;
 }
+
+/* 로고 SVG 크기 설정 */
+.ridi-logo {
+  width: 49px;
+  height: 18px;
+  display: block;
+}
 #right_group {
   display: flex;
   align-items: center;

@@ -1,19 +1,127 @@
-#main-detail {
+/* 전체 레이아웃 (왼쪽과 오른쪽을 가로로 배치) */
+.page-layout-wrap {
   display: flex;
-  gap: 40px;
-  padding: 40px 0;
-  align-items: flex-start;
 }
 
+/* 왼쪽 모든 콘텐츠 영역 */
+.left-main-content {
+  flex: 1;
+  padding-right: 40px;
+}
+
+/* 오른쪽 사이드바  */
+.detail-sidebar {
+  width: 160px;
+  flex-shrink: 0;
+  border-left: 1px solid #e6e8eb;
+  padding-left: 20px;
+  padding-top: 40px;
+}
+
+/*  베스트셀러 제목 */
+.sidebar-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* 베스트셀러 리스트 디자인 */
+.best-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.best-list li a {
+  display: flex;
+  text-decoration: none;
+  font-size: 12px;
+  color: #666;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.best-list li a:hover {
+  color: #999;
+}
+
+/*  순위 숫자 디자인 */
+.best-list .rank {
+  font-weight: bold;
+  width: 20px;
+  flex-shrink: 0;
+  color: red;
+}
+
+#main-detail {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  padding: 40px 0;
+  align-items: start;
+}
+#detail-img {
+  grid-row: span 2;
+}
 #detail-img img {
   width: 200px;
   border-radius: 4px;
 }
 
 #detail-info {
+  width: 100%;
+}
+.detail-others {
+  width: 100%;
+}
+/* 카테고리 전체 컨테이너 */
+.book-category-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+}
+
+/* 개별 카테고리 그룹 */
+.category-path {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* 글자와 > 사이의 간격 */
+}
+
+/* 카테고리 링크 텍스트 */
+.category-link {
+  text-decoration: none;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.category-link:hover {
+  color: #333;
+}
+
+/* 텍스트 화살표 (>) 스타일 */
+.category-arrow {
+  color: #999;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* 중간 구분선 (|) */
+.category-divider {
+  color: #d1d5d9;
+  font-size: 11px;
 }
 
 #detail-title {
@@ -37,6 +145,61 @@
   font-size: 15px;
   color: #666;
 }
+/* 관심 버튼 */
+#interest {
+  margin-top: 15px;
+}
+/* 이벤트 구간 */
+.detail-event {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  border-top: 1px solid rgba(102, 102, 102, 0.3);
+  border-bottom: 1px solid rgba(102, 102, 102, 0.3);
+  padding: 10px 0;
+}
+
+/* 로고 디자인 (위치 미세 조정) */
+.event-logo {
+  margin-top: 0px; /* 텍스트와 라인이 맞도록 조절용*/
+  padding: 3px 6px;
+  font-size: 12px;
+  background-color: rgb(222, 220, 235);
+  color: #645bae;
+  font-weight: bold;
+  border-radius: 3px;
+}
+.detail-event ul {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.detail-event ul li {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+.detail-event ul li:first-child {
+  border-bottom: 1px solid rgba(102, 102, 102, 0.3);
+  padding-bottom: 10px;
+}
+.detail-event ul li:last-child {
+  padding-top: 10px;
+}
+.detail-event ul li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+.detail-event ul li a svg {
+  color: #999;
+  font-size: 14px;
+}
+
 /* --------------------------
 작품 정보  및 작가 소개 부분
  --------------------------- */
@@ -92,6 +255,7 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-top: 20px;
+  margin-bottom: 100px;
 }
 .more-btn {
   width: 100%;
@@ -115,18 +279,20 @@
 #writer-profile.active {
   display: flex;
   flex-wrap: wrap;
-  max-height: none; /* 부모 상자의 200px 높이 제한 해제 */
-  overflow: visible; /* 부모 상자 밖으로 삐져나가는 부분 잘림 방지 */
-  white-space: normal; /* HTML 줄바꿈(엔터)이 여백으로 나타나는 현상 방지 */
+  max-height: none;
+  overflow: visible;
+  white-space: normal;
+  gap: 10px;
 }
 #writer-profile .tab-body {
   width: 100%;
 }
 .tab-btn3 {
-  width: 140px;
+  width: 110px;
   height: 40px;
   border-radius: 80px;
-  font-size: 16px;
+  font-size: 14px;
+  border: none;
 }
 .tab-btn3.active {
   background-color: rgb(26, 26, 26);
@@ -140,4 +306,75 @@
   overflow: visible; /* 잘림 방지 */
   margin-top: 15px; /* 위쪽 버튼들과의 여백 */
   white-space: normal !important;
+}
+
+/* ==========================================
+작가 프로필 카드 text5.txt
+ ========================================== */
+
+/* 작가 프로필 전체 컨테이너 */
+.author-container,
+.translation-container {
+  color: #333;
+}
+
+/* 상단 이름 & 버튼 영역 */
+.author-header,
+.translation-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.author-name,
+.translation-name {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.author-en-name,
+.translation-en-name {
+  font-size: 16px;
+  color: #999;
+  font-weight: 400;
+}
+
+/*  작가 신간알림 버튼 */
+.follow-btn {
+  display: flex;
+  align-items: center;
+  padding: 6px 15px;
+  border: 1px solid #1f8ce6;
+  border-radius: 20px;
+  background: #fff;
+  color: #1f8ce6;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* 상세 정보 리스트 영역 */
+.author-detail-list,
+.translation-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-item {
+  display: flex;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.detail-label {
+  width: 60px; /* 라벨 너비 고정 */
+  color: #808991;
+  flex-shrink: 0;
+}
+
+.detail-value {
+  color: #303538;
 }
