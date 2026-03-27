@@ -149,6 +149,7 @@
 #interest {
   margin-top: 15px;
 }
+
 /* 이벤트 구간 */
 .detail-event {
   display: flex;
@@ -184,9 +185,11 @@
 .detail-event ul li:first-child {
   border-bottom: 1px solid rgba(102, 102, 102, 0.3);
   padding-bottom: 10px;
+  height: 25px;
 }
 .detail-event ul li:last-child {
-  padding-top: 10px;
+  margin-top: 10px;
+  height: 25px;
 }
 .detail-event ul li a {
   display: flex;
@@ -377,4 +380,242 @@
 
 .detail-value {
   color: #303538;
+}
+
+/* 구매 섹션 (소장) */
+.detail-purchase {
+  margin-top: 20px;
+}
+
+.purchase-box {
+  display: flex;
+  border-top: 1px solid #e6e8eb;
+  border-bottom: 1px solid #e6e8eb;
+  margin-top: 20px;
+}
+
+.purchase-type {
+  width: 120px;
+  background-color: #f7f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  border-right: 1px solid #f2f4f5;
+}
+
+.purchase-price-info {
+  flex: 1;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+}
+
+.price-row.highlight .price-label {
+  color: #333;
+  font-weight: 500;
+}
+
+.price-original {
+  color: #333;
+}
+
+.price-discount {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.discount-rate {
+  color: #e64938;
+  font-weight: bold;
+}
+
+.price-final {
+  color: #1f8ce6;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.purchase-period {
+  text-align: right;
+  font-size: 11px;
+  color: #808991;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.purchase-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #d1d5d9;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+  font-size: 20px;
+}
+
+.btn-icon:hover {
+  background-color: #f7f9fa;
+}
+
+.btn-buy {
+  width: 250px;
+  background-color: #1f8ce6;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-buy:hover {
+  background-color: #0077d9;
+}
+
+/* ==========================================
+   작가의 대표 작품
+   ========================================== */
+#author-best {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.author-best-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.author-best-header h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.author-best-header .more-link {
+  font-size: 14px;
+  color: #999;
+  text-decoration: none;
+}
+
+.book-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-item {
+  width: 120px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-item-image {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #f2f4f5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.book-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 하단 뱃지 (예: 10% / 대여) 가짜표현용 */
+.book-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  font-size: 11px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.badge-discount {
+  background-color: #e64938;
+  padding: 3px 6px;
+}
+
+.badge-rent {
+  background-color: #666;
+  padding: 3px 6px;
+}
+
+.book-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-author {
+  font-size: 12px;
+  color: #888;
+  margin: 0 0 6px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-rating {
+  font-size: 12px;
+  color: #888;
+  display: flex;
+  align-items: center;
+}
+
+.book-rating .star {
+  color: #e64938;
+  margin-right: 2px;
+}
+
+.book-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }

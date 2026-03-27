@@ -251,4 +251,44 @@ document.addEventListener("DOMContentLoaded", () => {
     // 페이지 로드 시 기본 활성화 탭이 '작가 프로필'이므로, 버튼을 숨깁니다.
     moreBtn2Wrapper.style.display = "none";
   }
+
+  // 작가의 대표 작품 렌더링 호출
+  loadAuthorBestBooks();
 });
+
+// ==========================================
+// 작가의 대표 작품 렌더링 함수
+// ==========================================
+async function loadAuthorBestBooks() {
+  const books = await getAuthorBestBooks();
+  const listEl = document.getElementById("author-best-list");
+  if (!listEl) return;
+
+  if (!books || books.length === 0) {
+    listEl.innerHTML = "<li>작가의 대표 작품을 불러올 수 없습니다.</li>";
+    return;
+  }
+
+  listEl.innerHTML = books
+    .map((book) => {
+      // 저자, 번역가 조합
+      const authorText =
+        book.authors.join(", ") +
+        (book.translators && book.translators.length > 0
+          ? ", " + book.translators.join(", ") + " 번역"
+          : "");
+
+      return `
+        <li class="book-item">
+          <a href="#">
+            <div class="book-item-image">
+              <img src="${book.thumbnail}" alt="${book.title}" onerror="this.src='./img/no_image.png'"/>
+            </div>
+            <h4 class="book-title">${book.title}</h4>
+            <div class="book-author">${authorText}</div>
+          </a>
+        </li>
+      `;
+    })
+    .join("");
+}

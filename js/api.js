@@ -137,3 +137,18 @@ async function getBookDetail(title) {
     return null;
   }
 }
+
+// ==========================================
+// 4. 작가의 대표 작품 (5개) - 서브페이지용
+// ==========================================
+const AuthorBestTitles = [
+  "프로젝트 헤일메리",
+  "마션",
+  "아르테미스",
+  "체셔 크로싱",
+  "당신 인생의 이야기"
+];
+
+async function getAuthorBestBooks() {
+  return await getBooksByTitles(AuthorBestTitles);
+}
